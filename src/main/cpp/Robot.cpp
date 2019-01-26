@@ -23,8 +23,8 @@ OI Robot::m_oi;
 
 void Robot::RobotInit() {
   cs::UsbCamera camera1 = CameraServer::GetInstance()->StartAutomaticCapture();
-  camera1.SetResolution(160, 120);
-  camera1.SetFPS(15);
+  camera1.SetResolution(240, 180);
+  camera1.SetFPS(60);
   camera1.SetBrightness(50);
   std::cout << "Last Frame Time: " << camera1.GetLastFrameTime() << std::endl;
   std::cout << "Actual Frame Rate: " << camera1.GetActualFPS() << std::endl;

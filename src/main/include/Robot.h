@@ -12,6 +12,12 @@
 #include <TimedRobot.h>
 
 #include "Commands/ExampleCommand.h"
+#include <SmartDashboard/SmartDashboard.h>
+#include <CameraServer.h>
+#include "WPILib.h"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <iostream>
 #include "Commands/MyAutoCommand.h"
 #include "OI.h"
 #include "Subsystems/ExampleSubsystem.h"
@@ -20,6 +26,8 @@ class Robot : public frc::TimedRobot {
  public:
   static ExampleSubsystem m_subsystem;
   static OI m_oi;
+  static cs::UsbCamera camera1;
+
 
   void RobotInit() override;
   void RobotPeriodic() override;
